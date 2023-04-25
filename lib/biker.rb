@@ -24,8 +24,11 @@ class Biker
   end 
 
   def personal_record(ride)
-    return false if rides[ride].nil? 
-      rides[ride].min
+    if @rides[ride].nil?
+       false 
+    else   
+      @rides[ride].min
+    end 
   end
     
   def acceptable?(ride)
@@ -41,6 +44,6 @@ class Biker
   end
 
   def time_for_ride(ride)
-    rides[ride]
-  end
+    rides[ride].join 
+  end   
 end
