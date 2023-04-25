@@ -32,4 +32,12 @@ class Biker
     return true if ride.total_distance < @max_distance && acceptable_terrain.include?(ride.terrain)
   end
 
+  def total_logged_rides
+    total = 0 
+    rides.each do |ride, personal_rec|
+      total += rides[ride].count 
+    end
+    total 
+  end
+
 end
