@@ -16,12 +16,9 @@ class BikeClub
     end
   end
 
-  # def best_time(ride)
-  #   require 'pry'; binding.pry
-  #   bikers.each do |biker|
-  #     biker.rides.values.min_by do |ride|
-  #       ride.value 
-  #     end
-  #   end
-  # end
+  def best_time(ride)
+    @bikers.min_by do |biker| 
+      biker.time_for_ride(ride) 
+    end 
+  end 
 end

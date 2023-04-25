@@ -40,4 +40,7 @@ class Biker
     total 
   end
 
+  def time_for_ride(ride)
+    rides[ride]
+  end
 end
